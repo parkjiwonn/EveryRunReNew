@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/tx_km"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.75"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1.5"
+        android:layout_marginTop="5dp"
+        >
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/pv_1"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            app:progressView_animation="normal"
+            app:progressView_autoAnimate="true"
+            app:progressView_colorBackground="@color/white"
+            app:progressView_colorProgress="@color/primary"
+            app:progressView_labelSize="20sp"
+            app:progressView_labelTypeface="bold"
+            app:progressView_min="0"
+            app:progressView_max="100"
+            app:progressView_radius="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tx_pace"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="3'33''"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tx_gap"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.75"
+        android:textSize="18sp"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:layout_marginRight="30dp"
+        />
+
+
+
+
+
+</LinearLayout>

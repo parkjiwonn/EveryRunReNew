@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.everyrunrenew">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 카메라 및 저장위치를 위치 접근을 위한 권한 설정 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Access_Coarse_locaton 보다 더 정밀한 위치 정보를 얻을 수 있다. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 도시 block 단위의 정밀도의 위치 정보르 얻을 수 있다. -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EveryRunReNew"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="q">
+        <activity
+            android:name=".Stick_map_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Stick_menu_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Stick_main_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.Feed.MultiImgaeGalleryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.Feed.WriteFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.Feed.UpdateFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.Feed.ReadFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.Feed.FeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Running.ReadRunningDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Record.RecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Record.CourseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Record.DataDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResisterStep.Step5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile.HealthInfoActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".Running.RunningRecordService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC_yjrGHsk2hmeAOqwfWmSsfn6cbJoJnV8" />
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="q7kkx9mup2" />
+
+        <activity
+            android:name=".Running.RunningRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Record.RecordFinalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Record.RecordPreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.Crew_CRUD.UpdateCrewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.Crew_CRUD.ReadCrewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.Crew_CRUD.CreateCrewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.CrewSetting.MemberListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.CrewSetting.JoinManageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.CrewSetting.CrewSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.CrewSetting.ChangeLeaderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.TotalMyCrewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.TotalCrewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Community.CommunityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResetPass.WriteEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResetPass.WriteCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResetPass.ResetPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResetPass.FromLoginFindPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResisterStep.Step4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResisterStep.Step3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResisterStep.Step2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResisterStep.Step1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.ResisterStep.ReloginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo.LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".UserProfile.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile.EditUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.EveryRunReNew.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/external" />
+        </provider>
+    </application>
+
+</manifest>

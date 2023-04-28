@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Running.RunningRecordActivity">
+
+
+    <LinearLayout
+        android:id="@+id/lineartop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="2"
+        android:layout_marginTop="70dp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/tx_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0.00"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                />
+
+            <TextView
+                android:id="@+id/tx_킬로미터"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="킬로미터"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tx_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                app:layout_constraintTop_toBottomOf="@id/lineartop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/tx_소요시간"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소요 시간"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tx_time"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tx_nowpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lineartop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="0'00''"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="80sp"
+        android:layout_marginTop="80dp"
+        />
+
+    <TextView
+        android:id="@+id/tx_페이스"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tx_nowpace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="현재 페이스"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/btn_pause"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/ic_baseline_pause_circle_24"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_페이스" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

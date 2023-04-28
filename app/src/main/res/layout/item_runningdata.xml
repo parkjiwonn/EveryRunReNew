@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:background="#E1E9F8"
+    android:layout_marginBottom="10dp"
+    >
+
+    <TextView
+        android:id="@+id/tx_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="2023.02.01"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tx_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="화요일 오전 러닝"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tx_distance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6.63km"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tx_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6.63km"
+            android:textSize="18dp"
+
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tx_pace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6.63km"
+            android:textSize="18dp"
+
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="총 이동거리"
+            android:textSize="18dp"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="총 소요시간"
+            android:textSize="18dp"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:text="평균 페이스"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

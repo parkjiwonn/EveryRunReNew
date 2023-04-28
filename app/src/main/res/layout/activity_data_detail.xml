@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Record.DataDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:src="@drawable/ic_baseline_west_24">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="상세 정보"
+            android:textColor="#ffffff"
+            android:textSize="20sp">
+
+        </TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+
+            <TextView
+                android:id="@+id/tx_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1월 2일 월요일"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="20sp"
+                />
+
+            <TextView
+                android:id="@+id/tx_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오후 6:29~7:13"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="15sp"
+                />
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:text="거리"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tx_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.35"
+                    android:text="5.01km"
+                    android:gravity="right"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:text="평균 페이스"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tx_avgface"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.35"
+                    android:text="5.01km"
+                    android:gravity="right"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:text="최고 페이스"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tx_topface"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.35"
+                    android:text="5.01km"
+                    android:gravity="right"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:text="소요 시간"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tx_totaltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.35"
+                    android:text="5.01km"
+                    android:gravity="right"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:text="칼로리(근사치)"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tx_kcal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.35"
+                    android:text="5.01km"
+                    android:gravity="right"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:text="평균 케이던스"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tx_cadence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.35"
+                    android:text="5.01km"
+                    android:gravity="right"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:text="최고 고도"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tx_upAltitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.35"
+                    android:text="5.01km"
+                    android:gravity="right"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:text="최소 고도"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tx_downAltitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.35"
+                    android:text="5.01km"
+                    android:gravity="right"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Record.CourseDetailActivity"
+    android:orientation="vertical"
+    >
+
+        <fragment
+            android:id="@+id/map_view"
+            android:name="com.naver.maps.map.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            />
+
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="70dp"
+         android:orientation="horizontal"
+         android:weightSum="3"
+         android:layout_margin="10dp"
+         >
+
+         <TextView
+             android:id="@+id/tx_pace"
+             android:layout_width="0dp"
+             android:layout_height="60dp"
+             android:layout_weight="1"
+             android:background="@drawable/tx_litle_rounded"
+             android:textStyle="bold"
+             android:text="5'44''\n페이스"
+             android:gravity="center"
+             android:textSize="15sp"
+             android:layout_marginTop="10dp"
+             android:layout_margin="10dp"
+             />
+
+         <TextView
+             android:id="@+id/tx_altitude"
+             android:layout_width="0dp"
+             android:layout_height="60dp"
+             android:layout_weight="1"
+             android:background="@drawable/tx_litle_rounded"
+             android:textStyle="bold"
+             android:text="3m\n고도"
+             android:gravity="center"
+             android:textSize="15sp"
+             android:layout_marginTop="10dp"
+             android:layout_margin="10dp"
+             />
+
+         <TextView
+             android:id="@+id/tx_cadence"
+             android:layout_width="0dp"
+             android:layout_height="60dp"
+             android:layout_weight="1"
+             android:background="@drawable/tx_litle_rounded"
+             android:textStyle="bold"
+             android:text="70\n케이던스"
+             android:gravity="center"
+             android:textSize="15sp"
+             android:layout_marginTop="10dp"
+             android:layout_margin="10dp"
+             />
+
+     </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/chart"/>
+
+</LinearLayout>

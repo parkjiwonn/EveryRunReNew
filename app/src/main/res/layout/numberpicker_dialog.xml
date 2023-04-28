@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tx_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신장"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+        <NumberPicker
+            android:id="@+id/numberpicker"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tx_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cm"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_infosave"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:text="완료"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/primary"
+        />
+
+</LinearLayout>

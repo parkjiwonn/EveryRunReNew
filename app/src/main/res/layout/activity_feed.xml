@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Community.Feed.FeedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:src="@drawable/ic_baseline_west_24">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btn_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:src="@drawable/ic_baseline_settings_24"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="크루"
+                android:textColor="#ffffff"
+                android:textSize="20sp">
+
+            </TextView>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <TextView
+                android:id="@+id/tx_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="정보"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tx_feed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="피드"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/menu">
+
+            <Button
+                android:id="@+id/view_info"
+                android:layout_width="4dp"
+                android:layout_height="10px"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1E88E5"
+                android:visibility="invisible"
+                />
+
+            <Button
+                android:id="@+id/view_feed"
+                android:layout_width="4dp"
+                android:layout_height="10px"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1E88E5"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_gravity="bottom|right"
+            app:maxImageSize="30dp"
+            android:src="@drawable/ic_baseline_border_color_24"
+            >
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

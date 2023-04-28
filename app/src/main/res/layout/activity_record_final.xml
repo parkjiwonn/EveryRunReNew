@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Record.RecordFinalActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:src="@drawable/ic_baseline_west_24">
+
+        </ImageButton>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="러닝 기록"
+            android:textColor="#ffffff"
+            android:textSize="20sp">
+
+        </TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="오늘 . 오전 11:37"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:hint="제목을 입력해주세요" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:id="@+id/linearlayout1"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tx_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tx_킬로미터"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="이동 거리"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tx_pace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00'00''"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tx_페이스"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="페이스"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+
+                                />
+
+                            <ToggleButton
+                                android:id="@+id/question_pace"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/qestion_toggle"
+                                android:checked="false"
+                                android:text=""
+                                android:textOff=""
+                                android:textOn="" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tx_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00:00"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tx_시간"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearlayout2"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="80dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tx_altitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0m"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tx_고도"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="고도 상승"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tx_cadence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tx_케이던스"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="케이던스"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+
+                                />
+
+
+                            <ToggleButton
+                                android:id="@+id/question_cadence"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/qestion_toggle"
+                                android:checked="false"
+                                android:text=""
+                                android:textOff=""
+                                android:textOn="" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tx_kcal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tx_칼로리"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="칼로리"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtBanner"
+                    android:layout_width="240dp"
+                    android:layout_height="87dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="80dp"
+                    android:background="@drawable/bg_banner"
+                    android:gravity="center"
+                    android:text=" 페이스란 달리기의 속도를 의미합니다. \n 1km 당 달리는 시간을 말합니다."
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/txtBannerTail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rotate_banner_tail"
+                    android:layout_marginBottom="35dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="180dp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/txtBanner2"
+                    android:layout_width="350dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="140dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_banner"
+                    android:gravity="center"
+                    android:text=" 케이던스란 1분당 양 발이 몇 걸음 걸었는지 측정한 것이며 SPM(Steps Per Min)으로 표기합니다."
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/txtBannerTail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rotate_banner_tail"
+                    android:layout_marginBottom="35dp"
+                    android:layout_marginTop="130dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="175dp"
+                    android:visibility="gone"
+                    />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/btn_DataDetail"
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/tx_rounded_white"
+                    android:gravity="center"
+                    android:text="상세 정보"
+                    android:textColor="@color/black" />
+
+                <fragment
+                    android:id="@+id/map_view"
+                    android:name="com.naver.maps.map.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="20dp"
+                    />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:text="구간"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="Km"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="평균 페이스"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="+/-"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:layout_marginRight="30dp"
+                    />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/record_listview"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/primary"
+        android:text="저장"
+        android:textSize="20sp" />
+
+</LinearLayout>
